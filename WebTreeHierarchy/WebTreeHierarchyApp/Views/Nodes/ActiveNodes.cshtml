@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WebTreeHierarchyApp.Models.Node>
+@{
+    ViewData["Title"] = "ActiveNodes";
+}
+
+<h2>Active Nodes</h2>
+<div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Node ID</th>
+            <th>Node Name</th>
+            <th>Parent Node ID</th>
+            <th>Is Active</th>
+            <th>Start Date</th>
+            <!-- Add other headers as needed -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var node in Model)
+        {
+            <tr>
+                <td>@node.NodeId</td>
+                <td>@node.NodeName</td>
+                <td>@node.ParentNodeId</td>
+                <td>@node.IsActive</td>
+                <td>@node.StartDate</td>
+                <!-- Add other columns as needed -->
+            </tr>
+        }
+    </tbody>
+</table>
+</div>
